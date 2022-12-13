@@ -1,0 +1,25 @@
+<h3>Add Account</h3>
+<form [formGroup]="authForm">
+  <div>
+    <label>Name</label>
+    <input formControlName="username" />
+  </div>
+  {{ authForm.get("username")?.errors | json }}
+
+  <div>
+    <label>Password</label>
+    <input formControlName="password" />
+  </div>
+  {{ authForm.get("password")?.errors | json }}
+
+  <div>
+    <label>Confirm Password</label>
+    <input formControlName="confirmPassword" />
+  </div>
+  {{ authForm.get("confirmPassword")?.errors | json }}
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+  {{ authForm.errors | json }}
+</form>
